@@ -604,3 +604,33 @@ Swiper Styling
     width: 450px;
   }
 }
+
+.pdf-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive: Stack buttons vertically on small screens */
+@media (max-width: 767px) {
+  .pdf-buttons {
+      flex-direction: column;
+      gap: 10px; /* Reduce gap for mobile */
+  }
+}
