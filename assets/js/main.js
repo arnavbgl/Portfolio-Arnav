@@ -1,3 +1,8 @@
+// Toggle Navigation Menu
+document.getElementById("nav-toggle").addEventListener("click", function () {
+    document.getElementById("nav-menu").classList.toggle("show");
+});
+
 // Smooth Scrolling for Navbar Links
 document.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -11,6 +16,9 @@ document.querySelectorAll('.nav__link').forEach(link => {
                 behavior: 'smooth'
             });
         }
+
+        // Close Menu After Clicking a Link (for mobile usability)
+        document.getElementById("nav-menu").classList.remove("show");
     });
 });
 

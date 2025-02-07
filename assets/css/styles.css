@@ -115,6 +115,7 @@ img {
 }
 
 /*===== NAV =====*/
+/* NAVIGATION BAR */
 .nav {
   height: var(--header-height);
   display: flex;
@@ -122,6 +123,8 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+
+/* NAV MENU - MOBILE */
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -131,19 +134,33 @@ img {
     height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
-    transition: 0.5s;
+    transition: right 0.5s ease-in-out;
+  }
+
+  /* Show Menu When Active */
+  .nav__menu.show {
+    right: 0;
   }
 }
+
+/* MENU ITEMS */
 .nav__item {
   margin-bottom: var(--mb-4);
 }
+
 .nav__link {
   position: relative;
   color: #fff;
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease-in-out;
 }
+
+/* HOVER EFFECT */
 .nav__link:hover {
-  position: relative;
+  color: var(--first-color);
 }
+
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -153,13 +170,24 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+
+/* LOGO */
 .nav__logo {
   color: var(--second-color);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
+
+/* TOGGLE BUTTON */
 .nav__toggle {
   color: var(--second-color);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color);
 }
 
 /*Active menu*/
